@@ -8,6 +8,7 @@
     "dev:frontend": "cd frontend && vite",
     "dev:backend": "cd backend && nodemon src/server.js",
     "build:frontend": "cd frontend && vite build",
+    "vercel-build": "npm run build:frontend",
     "start": "node backend/src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
