@@ -2,10 +2,11 @@
   "version": 2,
   "builds": [
     {
-      "src": "frontend/package.json",
+      "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "dist"
+        "distDir": "frontend/dist",
+        "buildCommand": "npm run build:frontend"
       }
     },
     {
@@ -23,6 +24,5 @@
       "dest": "frontend/dist/$1"
     }
   ],
-  "installCommand": "npm install",
-  "buildCommand": "npm run build:frontend"
+  "installCommand": "npm install"
 }
